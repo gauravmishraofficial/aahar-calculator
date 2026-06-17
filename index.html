@@ -267,7 +267,7 @@
     <thead>
       <tr>
         <th style="width:40%">Item</th>
-        <th>Price (₹)</th>
+        <th>Price ($)</th>
         <th>Qty Sold</th>
         <th>Total</th>
         <th></th>
@@ -285,7 +285,7 @@
     <thead>
       <tr>
         <th style="width:40%">Expense</th>
-        <th colspan="2">Amount (₹)</th>
+        <th colspan="2">Amount ($)</th>
         <th>Total</th>
         <th></th>
       </tr>
@@ -303,15 +303,15 @@
   <div class="result-grid">
     <div class="result-box revenue">
       <div class="label">Total Revenue</div>
-      <div class="value" id="res-revenue">₹0</div>
+      <div class="value" id="res-revenue">$0</div>
     </div>
     <div class="result-box cost">
       <div class="label">Total Costs</div>
-      <div class="value" id="res-cost">₹0</div>
+      <div class="value" id="res-cost">$0</div>
     </div>
     <div class="result-box profit" id="res-profit-box">
       <div class="label" id="res-profit-label">Net Profit</div>
-      <div class="value" id="res-profit">₹0</div>
+      <div class="value" id="res-profit">$0</div>
       <div class="sub" id="res-profit-sub"></div>
     </div>
     <div class="result-box margin">
@@ -345,7 +345,7 @@
       <td><input type="text" placeholder="e.g. Biryani" value="${name}" oninput="updateRowTotal(this)"/></td>
       <td><input type="number" min="0" placeholder="0" value="${price}" oninput="updateRowTotal(this)"/></td>
       <td><input type="number" min="0" placeholder="0" value="${qty}" oninput="updateRowTotal(this)"/></td>
-      <td class="row-total" style="font-weight:600;color:#2a9d8f;white-space:nowrap;">₹0</td>
+      <td class="row-total" style="font-weight:600;color:#2a9d8f;white-space:nowrap;">$0</td>
       <td><button class="btn-remove" onclick="removeRow(this)">×</button></td>
     `;
     updateRowTotalFromRow(tr);
@@ -357,7 +357,7 @@
     tr.innerHTML = `
       <td><input type="text" placeholder="e.g. Raw materials" value="${name}" oninput="updateRowTotal(this)"/></td>
       <td colspan="2"><input type="number" min="0" placeholder="0" value="${amount}" oninput="updateRowTotal(this)"/></td>
-      <td class="row-total" style="font-weight:600;color:#e07b39;white-space:nowrap;">₹0</td>
+      <td class="row-total" style="font-weight:600;color:#e07b39;white-space:nowrap;">$0</td>
       <td><button class="btn-remove" onclick="removeRow(this)">×</button></td>
     `;
     updateRowTotalFromRow(tr, 'cost');
@@ -390,7 +390,7 @@
       total = price * qty;
     }
     const cell = tr.querySelector('.row-total');
-    if (cell) cell.textContent = '₹' + fmt(total);
+    if (cell) cell.textContent = '$' + fmt(total);
   }
 
   function sumTable(tbodyId) {
@@ -417,9 +417,9 @@
     const profit  = revenue - cost;
     const margin  = revenue > 0 ? (profit / revenue * 100) : 0;
 
-    document.getElementById('res-revenue').textContent = '₹' + fmt(revenue);
-    document.getElementById('res-cost').textContent    = '₹' + fmt(cost);
-    document.getElementById('res-profit').textContent  = '₹' + fmt(Math.abs(profit));
+    document.getElementById('res-revenue').textContent = '$' + fmt(revenue);
+    document.getElementById('res-cost').textContent    = '$' + fmt(cost);
+    document.getElementById('res-profit').textContent  = '$' + fmt(Math.abs(profit));
     document.getElementById('res-margin').textContent  = margin.toFixed(1) + '%';
 
     const profitBox = document.getElementById('res-profit-box');
@@ -454,7 +454,7 @@
 
     const sessions = getHistory();
     sessions.unshift({
-      date: new Date().toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }),
+      date: new Date().toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }),
       revenue,
       cost,
       profit
@@ -486,10 +486,10 @@
       <li>
         <div>
           <div style="font-weight:500">${s.date}</div>
-          <div class="h-date">Revenue ₹${fmt(s.revenue)} &nbsp;|&nbsp; Costs ₹${fmt(s.cost)}</div>
+          <div class="h-date">Revenue $${fmt(s.revenue)} &nbsp;|&nbsp; Costs $${fmt(s.cost)}</div>
         </div>
         <div class="h-profit ${s.profit >= 0 ? 'pos' : 'neg'}">
-          ${s.profit >= 0 ? '+' : '-'}₹${fmt(Math.abs(s.profit))}
+          ${s.profit >= 0 ? '+' : '-'}$${fmt(Math.abs(s.profit))}
         </div>
       </li>
     `).join('');
@@ -498,15 +498,15 @@
   // ---- Helpers ----
 
   function fmt(n) {
-    return Number(n.toFixed(2)).toLocaleString('en-IN');
+    return Number(n.toFixed(2)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
   // ---- Init ----
 
   // Seed with a couple of example rows
   const rb = document.getElementById('revenue-body');
-  rb.appendChild(createRevenueRow('Biryani', '180', ''));
-  rb.appendChild(createRevenueRow('Chai', '20', ''));
+  rb.appendChild(createRevenueRow('Burger', '8.50', ''));
+  rb.appendChild(createRevenueRow('Coffee', '3.00', ''));
   rb.appendChild(createRevenueRow());
 
   const cb = document.getElementById('cost-body');
