@@ -12,39 +12,24 @@
       background: #fdf6ec;
       color: #2d2d2d;
       min-height: 100vh;
-      padding: 24px 16px;
+      padding: 24px 16px 60px;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      color: #e07b39;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      color: #888;
-      margin-top: 4px;
-      font-size: 0.9rem;
-    }
+    header { text-align: center; margin-bottom: 28px; }
+    header h1 { font-size: 2rem; color: #e07b39; letter-spacing: 1px; }
+    header p { color: #888; margin-top: 4px; font-size: 0.9rem; }
 
     .card {
       background: white;
       border-radius: 12px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      padding: 24px;
-      margin-bottom: 20px;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 22px;
+      margin: 0 auto 20px;
+      max-width: 760px;
     }
 
     .card h2 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: #555;
       text-transform: uppercase;
@@ -52,470 +37,431 @@
       margin-bottom: 16px;
       border-bottom: 2px solid #fde8d3;
       padding-bottom: 8px;
-    }
-
-    .field-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .field-row label {
-      flex: 1;
-      font-size: 0.92rem;
-      color: #444;
-    }
-
-    .field-row input {
-      width: 140px;
-      padding: 8px 12px;
-      border: 1.5px solid #ddd;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      text-align: right;
-      transition: border-color 0.2s;
-      background: #fafafa;
-    }
-
-    .field-row input:focus {
-      outline: none;
-      border-color: #e07b39;
-      background: white;
-    }
-
-    .field-row .unit {
-      width: 36px;
-      color: #888;
-      font-size: 0.85rem;
-    }
-
-    /* Items table */
-    .items-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-    }
-
-    .items-table th {
-      text-align: left;
-      padding: 6px 8px;
-      color: #888;
-      font-weight: 500;
-      border-bottom: 1px solid #eee;
-    }
-
-    .items-table td {
-      padding: 6px 8px;
-    }
-
-    .items-table td input {
-      width: 100%;
-      padding: 6px 8px;
-      border: 1.5px solid #ddd;
-      border-radius: 6px;
-      font-size: 0.88rem;
-      background: #fafafa;
-    }
-
-    .items-table td input:focus {
-      outline: none;
-      border-color: #e07b39;
-      background: white;
-    }
-
-    .items-table tr:hover td input { background: white; }
-
-    .btn-add {
-      margin-top: 10px;
-      padding: 7px 16px;
-      background: #fde8d3;
-      color: #e07b39;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .btn-add:hover { background: #fbd4b0; }
-
-    .btn-remove {
-      background: none;
-      border: none;
-      color: #ccc;
-      cursor: pointer;
-      font-size: 1.1rem;
-      line-height: 1;
-      padding: 0 4px;
-    }
-
-    .btn-remove:hover { color: #e05555; }
-
-    /* Results */
-    .results {
-      max-width: 680px;
-      margin: 0 auto 24px;
-    }
-
-    .result-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .result-box {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      padding: 20px;
-      text-align: center;
-    }
-
-    .result-box .label {
-      font-size: 0.78rem;
-      color: #888;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 6px;
-    }
-
-    .result-box .value {
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-
-    .result-box.revenue .value  { color: #2a9d8f; }
-    .result-box.cost    .value  { color: #e07b39; }
-    .result-box.profit  .value  { color: #2a9d8f; }
-    .result-box.profit.loss .value { color: #e05555; }
-    .result-box.margin  .value  { color: #555; }
-
-    .result-box .sub {
-      font-size: 0.75rem;
-      color: #aaa;
-      margin-top: 4px;
-    }
-
-    .btn-calc {
-      display: block;
-      width: 100%;
-      max-width: 680px;
-      margin: 0 auto 20px;
-      padding: 14px;
-      background: #e07b39;
-      color: white;
-      border: none;
-      border-radius: 12px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      cursor: pointer;
-      letter-spacing: 0.3px;
-      transition: background 0.2s;
-    }
-
-    .btn-calc:hover { background: #c9622a; }
-
-    /* History */
-    .history-list {
-      list-style: none;
-    }
-
-    .history-list li {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 0.88rem;
     }
 
-    .history-list li:last-child { border-bottom: none; }
+    /* Sync card */
+    .sync-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .sync-row input[type="password"] {
+      flex: 1;
+      min-width: 160px;
+      padding: 10px 12px;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      background: #fafafa;
+    }
+    .sync-row input:focus { outline: none; border-color: #e07b39; background: white; }
 
-    .history-list .h-date { color: #aaa; font-size: 0.78rem; }
-    .history-list .h-profit { font-weight: 700; }
-    .history-list .h-profit.pos { color: #2a9d8f; }
-    .history-list .h-profit.neg { color: #e05555; }
-
-    .empty-history { color: #bbb; font-size: 0.88rem; text-align: center; padding: 16px 0; }
-
-    .btn-clear {
-      background: none;
-      border: 1px solid #eee;
-      color: #ccc;
-      border-radius: 6px;
-      padding: 4px 10px;
-      font-size: 0.78rem;
+    .btn {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      float: right;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s, opacity 0.2s;
+    }
+    .btn-primary { background: #e07b39; color: white; }
+    .btn-primary:hover { background: #c9622a; }
+    .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-soft { background: #fde8d3; color: #e07b39; }
+    .btn-soft:hover { background: #fbd4b0; }
+
+    .sync-status { margin-top: 12px; font-size: 0.85rem; color: #888; min-height: 18px; }
+    .sync-status.ok { color: #2a9d8f; }
+    .sync-status.err { color: #e05555; }
+
+    .filter-row { margin-top: 14px; display: flex; gap: 8px; align-items: center; font-size: 0.85rem; color: #777; flex-wrap: wrap; }
+    .filter-row select {
+      padding: 6px 10px; border: 1.5px solid #ddd; border-radius: 8px; background: #fafafa; font-size: 0.85rem;
     }
 
-    .btn-clear:hover { color: #e05555; border-color: #e05555; }
+    /* Items table */
+    .items-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .items-table th {
+      text-align: right; padding: 8px 8px; color: #999; font-weight: 500;
+      border-bottom: 1px solid #eee; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.3px;
+    }
+    .items-table th.l, .items-table td.l { text-align: left; }
+    .items-table td { padding: 7px 8px; text-align: right; border-bottom: 1px solid #f5f5f5; }
+    .items-table td input {
+      width: 92px; padding: 7px 8px; border: 1.5px solid #ddd; border-radius: 6px;
+      font-size: 0.88rem; background: #fafafa; text-align: right;
+    }
+    .items-table td input.name-input { width: 100%; text-align: left; }
+    .items-table td input:focus { outline: none; border-color: #e07b39; background: white; }
+    .items-table .profit-cell { font-weight: 700; white-space: nowrap; }
+    .items-table .profit-cell.pos { color: #2a9d8f; }
+    .items-table .profit-cell.neg { color: #e05555; }
+    .items-table .sold-cell { font-weight: 600; color: #555; }
+    .items-table .muted { color: #bbb; }
+
+    .btn-remove { background: none; border: none; color: #ccc; cursor: pointer; font-size: 1.1rem; line-height: 1; }
+    .btn-remove:hover { color: #e05555; }
+
+    .empty-row td { text-align: center; color: #bbb; padding: 22px 0; font-size: 0.88rem; }
+
+    /* Results */
+    .result-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 760px; margin: 0 auto 20px; }
+    @media (max-width: 640px) { .result-grid { grid-template-columns: 1fr 1fr; } }
+    .result-box { background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 18px; text-align: center; }
+    .result-box .label { font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .result-box .value { font-size: 1.4rem; font-weight: 700; }
+    .result-box.revenue .value { color: #2a9d8f; }
+    .result-box.cogs .value { color: #e07b39; }
+    .result-box.profit .value { color: #2a9d8f; }
+    .result-box.profit.loss .value { color: #e05555; }
+    .result-box.margin .value { color: #555; }
+
+    .hint { font-size: 0.82rem; color: #999; margin-top: 10px; line-height: 1.5; }
+    .row-actions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Aahar</h1>
-  <p>Food Business Profit Calculator</p>
+  <p>Profit Calculator</p>
 </header>
 
-<!-- Revenue Section -->
+<!-- Sync card -->
 <div class="card">
-  <h2>Revenue (Sales)</h2>
-  <table class="items-table" id="revenue-table">
+  <h2>1 · Pull Sales from Aahar</h2>
+  <div class="sync-row">
+    <input type="password" id="admin-pass" placeholder="Your Aahar admin password" />
+    <button class="btn btn-primary" id="sync-btn" onclick="syncSales()">Sync Sales</button>
+  </div>
+  <div class="filter-row">
+    <label for="period">Period:</label>
+    <select id="period" onchange="rebuildItems()">
+      <option value="all">All time</option>
+      <option value="today">Today</option>
+      <option value="7">Last 7 days</option>
+      <option value="30">Last 30 days</option>
+    </select>
+    <span id="order-count" class="muted"></span>
+  </div>
+  <div class="sync-status" id="sync-status">Enter your admin password and tap Sync to load how many of each item you sold.</div>
+  <div class="hint">Your password is sent only to your own Aahar system to log in, and is never saved. Quantities are pulled live from your real orders.</div>
+</div>
+
+<!-- Items / profit card -->
+<div class="card">
+  <h2>2 · Your Items &amp; Profit</h2>
+  <table class="items-table">
     <thead>
       <tr>
-        <th style="width:40%">Item</th>
-        <th>Price ($)</th>
-        <th>Qty Sold</th>
-        <th>Total</th>
+        <th class="l">Item</th>
+        <th>Sold</th>
+        <th>Sell&nbsp;Price</th>
+        <th>Cost&nbsp;to&nbsp;Make</th>
+        <th>Profit</th>
         <th></th>
       </tr>
     </thead>
-    <tbody id="revenue-body"></tbody>
+    <tbody id="items-body"></tbody>
   </table>
-  <button class="btn-add" onclick="addRow('revenue')">+ Add Item</button>
+  <div class="row-actions">
+    <button class="btn btn-soft" onclick="addManualItem()">+ Add item manually</button>
+  </div>
+  <div class="hint">“Sold” comes from your synced orders. Fill in <b>Cost to Make</b> (what you spent per item) — it’s saved per item, so you only enter it once.</div>
 </div>
 
-<!-- Cost Section -->
+<!-- Other expenses -->
 <div class="card">
-  <h2>Costs & Expenses</h2>
-  <table class="items-table" id="cost-table">
+  <h2>3 · Other Expenses (optional)</h2>
+  <table class="items-table">
     <thead>
-      <tr>
-        <th style="width:40%">Expense</th>
-        <th colspan="2">Amount ($)</th>
-        <th>Total</th>
-        <th></th>
-      </tr>
+      <tr><th class="l">Expense</th><th>Amount</th><th></th></tr>
     </thead>
-    <tbody id="cost-body"></tbody>
+    <tbody id="expense-body"></tbody>
   </table>
-  <button class="btn-add" onclick="addRow('cost')">+ Add Expense</button>
+  <div class="row-actions">
+    <button class="btn btn-soft" onclick="addExpense()">+ Add expense</button>
+  </div>
+  <div class="hint">Costs not tied to a single item — rent, gas, delivery, packaging, etc.</div>
 </div>
-
-<!-- Calculate Button -->
-<button class="btn-calc" onclick="calculate()">Calculate Profit</button>
 
 <!-- Results -->
-<div class="results">
-  <div class="result-grid">
-    <div class="result-box revenue">
-      <div class="label">Total Revenue</div>
-      <div class="value" id="res-revenue">$0</div>
-    </div>
-    <div class="result-box cost">
-      <div class="label">Total Costs</div>
-      <div class="value" id="res-cost">$0</div>
-    </div>
-    <div class="result-box profit" id="res-profit-box">
-      <div class="label" id="res-profit-label">Net Profit</div>
-      <div class="value" id="res-profit">$0</div>
-      <div class="sub" id="res-profit-sub"></div>
-    </div>
-    <div class="result-box margin">
-      <div class="label">Profit Margin</div>
-      <div class="value" id="res-margin">0%</div>
-      <div class="sub">of revenue</div>
-    </div>
+<div class="result-grid">
+  <div class="result-box revenue">
+    <div class="label">Revenue</div>
+    <div class="value" id="res-revenue">$0</div>
   </div>
-</div>
-
-<!-- History -->
-<div class="card" style="max-width:680px;margin:0 auto 32px;">
-  <h2>
-    Saved Sessions
-    <button class="btn-clear" onclick="clearHistory()">Clear all</button>
-  </h2>
-  <ul class="history-list" id="history-list">
-    <li class="empty-history">No sessions saved yet. Calculate and save a session to track over time.</li>
-  </ul>
-  <div style="margin-top:14px;">
-    <button class="btn-add" onclick="saveSession()">Save this session</button>
+  <div class="result-box cogs">
+    <div class="label">Cost of Items</div>
+    <div class="value" id="res-cogs">$0</div>
+  </div>
+  <div class="result-box profit" id="res-profit-box">
+    <div class="label" id="res-profit-label">Net Profit</div>
+    <div class="value" id="res-profit">$0</div>
+  </div>
+  <div class="result-box margin">
+    <div class="label">Margin</div>
+    <div class="value" id="res-margin">0%</div>
   </div>
 </div>
 
 <script>
-  // ---- Row management ----
+  const API = 'https://aahar-api.graywater-11c194d5.centralus.azurecontainerapps.io';
 
-  function createRevenueRow(name = '', price = '', qty = '') {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td><input type="text" placeholder="e.g. Biryani" value="${name}" oninput="updateRowTotal(this)"/></td>
-      <td><input type="number" min="0" placeholder="0" value="${price}" oninput="updateRowTotal(this)"/></td>
-      <td><input type="number" min="0" placeholder="0" value="${qty}" oninput="updateRowTotal(this)"/></td>
-      <td class="row-total" style="font-weight:600;color:#2a9d8f;white-space:nowrap;">$0</td>
-      <td><button class="btn-remove" onclick="removeRow(this)">×</button></td>
-    `;
-    updateRowTotalFromRow(tr);
-    return tr;
+  // In-memory state
+  let syncedItems = [];   // [{ key, name, sold, sellPrice }]  from orders
+  let manualItems = [];   // [{ key, name, sold, sellPrice }]  user-added
+  let allOrders = [];     // raw orders from last sync
+
+  // ---- Persistence of cost prices (entered once, kept forever) ----
+  function loadCosts() {
+    try { return JSON.parse(localStorage.getItem('aahar_costs')) || {}; }
+    catch { return {}; }
+  }
+  function saveCost(key, value) {
+    const c = loadCosts();
+    c[key] = value;
+    localStorage.setItem('aahar_costs', JSON.stringify(c));
+  }
+  function getCost(key) {
+    const v = loadCosts()[key];
+    return (v === undefined || v === null || v === '') ? '' : v;
   }
 
-  function createCostRow(name = '', amount = '') {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td><input type="text" placeholder="e.g. Raw materials" value="${name}" oninput="updateRowTotal(this)"/></td>
-      <td colspan="2"><input type="number" min="0" placeholder="0" value="${amount}" oninput="updateRowTotal(this)"/></td>
-      <td class="row-total" style="font-weight:600;color:#e07b39;white-space:nowrap;">$0</td>
-      <td><button class="btn-remove" onclick="removeRow(this)">×</button></td>
-    `;
-    updateRowTotalFromRow(tr, 'cost');
-    return tr;
-  }
+  // ---- Sync ----
+  async function syncSales() {
+    const pass = document.getElementById('admin-pass').value.trim();
+    const status = document.getElementById('sync-status');
+    const btn = document.getElementById('sync-btn');
+    if (!pass) { setStatus('Please enter your admin password first.', 'err'); return; }
 
-  function addRow(type) {
-    const tbody = document.getElementById(type + '-body');
-    tbody.appendChild(type === 'revenue' ? createRevenueRow() : createCostRow());
-  }
+    btn.disabled = true;
+    setStatus('Signing in…', '');
 
-  function removeRow(btn) {
-    btn.closest('tr').remove();
-  }
-
-  function updateRowTotal(input) {
-    const tr = input.closest('tr');
-    const type = tr.closest('tbody').id === 'revenue-body' ? 'revenue' : 'cost';
-    updateRowTotalFromRow(tr, type);
-  }
-
-  function updateRowTotalFromRow(tr, type) {
-    const inputs = tr.querySelectorAll('input[type="number"]');
-    let total = 0;
-    if (type === 'cost') {
-      total = parseFloat(inputs[0]?.value) || 0;
-    } else {
-      const price = parseFloat(inputs[0]?.value) || 0;
-      const qty   = parseFloat(inputs[1]?.value) || 0;
-      total = price * qty;
-    }
-    const cell = tr.querySelector('.row-total');
-    if (cell) cell.textContent = '$' + fmt(total);
-  }
-
-  function sumTable(tbodyId) {
-    let total = 0;
-    const rows = document.querySelectorAll('#' + tbodyId + ' tr');
-    rows.forEach(tr => {
-      const inputs = tr.querySelectorAll('input[type="number"]');
-      if (tbodyId === 'cost-body') {
-        total += parseFloat(inputs[0]?.value) || 0;
-      } else {
-        const price = parseFloat(inputs[0]?.value) || 0;
-        const qty   = parseFloat(inputs[1]?.value) || 0;
-        total += price * qty;
+    try {
+      // 1) Login -> token
+      const loginRes = await fetch(API + '/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pass })
+      });
+      if (!loginRes.ok) {
+        setStatus(loginRes.status === 401 || loginRes.status === 403
+          ? 'Wrong password — please try again.'
+          : 'Login failed (error ' + loginRes.status + ').', 'err');
+        btn.disabled = false; return;
       }
+      const { token } = await loginRes.json();
+      if (!token) { setStatus('Login succeeded but no access token was returned.', 'err'); btn.disabled = false; return; }
+
+      setStatus('Loading your orders…', '');
+
+      // 2) Fetch orders
+      const ordersRes = await fetch(API + '/admin/orders', {
+        headers: { 'Authorization': 'Bearer ' + token }
+      });
+      if (!ordersRes.ok) {
+        setStatus('Could not load orders (error ' + ordersRes.status + ').', 'err');
+        btn.disabled = false; return;
+      }
+      const data = await ordersRes.json();
+      allOrders = Array.isArray(data) ? data : (data.orders || data.items || []);
+
+      document.getElementById('admin-pass').value = '';
+      btn.disabled = false;
+      rebuildItems();
+      setStatus('Synced ' + allOrders.length + ' orders. Quantities updated below.', 'ok');
+    } catch (e) {
+      btn.disabled = false;
+      setStatus('Network error — check your connection and try again.', 'err');
+    }
+  }
+
+  function setStatus(msg, kind) {
+    const s = document.getElementById('sync-status');
+    s.textContent = msg;
+    s.className = 'sync-status' + (kind ? ' ' + kind : '');
+  }
+
+  // ---- Aggregate orders -> items (respecting the period filter) ----
+  function orderDate(o) {
+    const raw = o.createdAt || o.created_at || o.date || o.dueDate || o.orderDate;
+    const d = raw ? new Date(raw) : null;
+    return (d && !isNaN(d)) ? d : null;
+  }
+
+  function withinPeriod(o) {
+    const period = document.getElementById('period').value;
+    if (period === 'all') return true;
+    const d = orderDate(o);
+    if (!d) return true; // if no date, don't hide it
+    const now = new Date();
+    if (period === 'today') {
+      return d.toDateString() === now.toDateString();
+    }
+    const days = parseInt(period, 10);
+    const cutoff = new Date(now.getTime() - days * 86400000);
+    return d >= cutoff;
+  }
+
+  function rebuildItems() {
+    const map = {}; // key -> { key, name, sold, sellPrice }
+    let counted = 0;
+
+    allOrders.filter(withinPeriod).forEach(order => {
+      counted++;
+      const items = order.items || order.lineItems || [];
+      items.forEach(it => {
+        const name = it.name || it.fullName || it.itemName || 'Item';
+        const size = it.size || it.trayType || '';
+        const key = size ? name + ' (' + size + ')' : name;
+        const qty = Number(it.quantity ?? it.qty ?? 1) || 0;
+        const price = Number(it.price ?? it.unitPrice ?? 0) || 0;
+        if (!map[key]) map[key] = { key, name: key, sold: 0, sellPrice: price };
+        map[key].sold += qty;
+        if (price) map[key].sellPrice = price; // keep latest known price
+      });
+    });
+
+    syncedItems = Object.values(map).sort((a, b) => b.sold - a.sold);
+    document.getElementById('order-count').textContent =
+      allOrders.length ? '· ' + counted + ' of ' + allOrders.length + ' orders in range' : '';
+    renderItems();
+  }
+
+  // ---- Render items table ----
+  function renderItems() {
+    const tbody = document.getElementById('items-body');
+    const all = [...syncedItems, ...manualItems];
+
+    if (all.length === 0) {
+      tbody.innerHTML = '<tr class="empty-row"><td colspan="6">No items yet — Sync your sales above, or add an item manually.</td></tr>';
+      calculate();
+      return;
+    }
+
+    tbody.innerHTML = all.map((it, idx) => {
+      const isManual = idx >= syncedItems.length;
+      const mi = isManual ? idx - syncedItems.length : -1;
+      const cost = getCost(it.key);
+      return `
+        <tr data-key="${escapeAttr(it.key)}">
+          <td class="l">${isManual
+              ? `<input class="name-input" type="text" placeholder="Item name" value="${escapeAttr(it.name)}" oninput="onManualName(${mi}, this.value)"/>`
+              : escapeHtml(it.name)}</td>
+          <td class="sold-cell">${isManual
+              ? `<input type="number" min="0" value="${it.sold || ''}" placeholder="0" oninput="onManualField(${mi}, 'sold', this.value)"/>`
+              : it.sold}</td>
+          <td>${isManual
+              ? `<input type="number" min="0" step="0.01" value="${it.sellPrice || ''}" placeholder="0" oninput="onManualField(${mi}, 'sellPrice', this.value)"/>`
+              : '$' + fmt(it.sellPrice)}</td>
+          <td><input type="number" min="0" step="0.01" placeholder="0" value="${cost}"
+                  oninput="onCostChange('${escapeAttr(it.key)}', this.value)"/></td>
+          <td class="profit-cell" id="profit-${idx}">$0</td>
+          <td>${isManual ? `<button class="btn-remove" onclick="removeManual(${mi})">×</button>` : ''}</td>
+        </tr>`;
+    }).join('');
+
+    calculate();
+  }
+
+  function onCostChange(key, val) {
+    saveCost(key, val);
+    calculate();
+  }
+  function onManualField(i, field, val) {
+    manualItems[i][field] = Number(val) || 0;
+    calculate();
+  }
+  function onManualName(i, val) {
+    // renaming a manual item rekeys its cost storage
+    manualItems[i].name = val;
+    manualItems[i].key = 'manual:' + val;
+    calculate();
+  }
+  function addManualItem() {
+    manualItems.push({ key: 'manual:' + Date.now(), name: '', sold: 0, sellPrice: 0 });
+    renderItems();
+  }
+  function removeManual(i) {
+    manualItems.splice(i, 1);
+    renderItems();
+  }
+
+  // ---- Expenses ----
+  function addExpense(name = '', amount = '') {
+    const tbody = document.getElementById('expense-body');
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="l"><input class="name-input" type="text" placeholder="e.g. Rent" value="${escapeAttr(name)}"/></td>
+      <td><input type="number" min="0" step="0.01" placeholder="0" value="${amount}" oninput="calculate()"/></td>
+      <td><button class="btn-remove" onclick="this.closest('tr').remove(); calculate();">×</button></td>`;
+    tbody.appendChild(tr);
+  }
+
+  function sumExpenses() {
+    let total = 0;
+    document.querySelectorAll('#expense-body tr').forEach(tr => {
+      const amt = tr.querySelector('input[type="number"]');
+      total += Number(amt?.value) || 0;
     });
     return total;
   }
 
   // ---- Calculate ----
-
   function calculate() {
-    const revenue = sumTable('revenue-body');
-    const cost    = sumTable('cost-body');
-    const profit  = revenue - cost;
-    const margin  = revenue > 0 ? (profit / revenue * 100) : 0;
+    const all = [...syncedItems, ...manualItems];
+    let revenue = 0, cogs = 0;
+
+    all.forEach((it, idx) => {
+      const sold = Number(it.sold) || 0;
+      const sell = Number(it.sellPrice) || 0;
+      const cost = Number(getCostForItem(it, idx)) || 0;
+      const lineRev = sell * sold;
+      const lineCost = cost * sold;
+      const lineProfit = lineRev - lineCost;
+      revenue += lineRev;
+      cogs += lineCost;
+      const cell = document.getElementById('profit-' + idx);
+      if (cell) {
+        cell.textContent = (lineProfit < 0 ? '-$' : '$') + fmt(Math.abs(lineProfit));
+        cell.className = 'profit-cell ' + (lineProfit >= 0 ? 'pos' : 'neg');
+      }
+    });
+
+    const expenses = sumExpenses();
+    const netProfit = revenue - cogs - expenses;
+    const margin = revenue > 0 ? (netProfit / revenue * 100) : 0;
 
     document.getElementById('res-revenue').textContent = '$' + fmt(revenue);
-    document.getElementById('res-cost').textContent    = '$' + fmt(cost);
-    document.getElementById('res-profit').textContent  = '$' + fmt(Math.abs(profit));
-    document.getElementById('res-margin').textContent  = margin.toFixed(1) + '%';
+    document.getElementById('res-cogs').textContent = '$' + fmt(cogs + expenses);
+    document.getElementById('res-profit').textContent = (netProfit < 0 ? '-$' : '$') + fmt(Math.abs(netProfit));
+    document.getElementById('res-margin').textContent = margin.toFixed(1) + '%';
 
-    const profitBox = document.getElementById('res-profit-box');
-    const profitLbl = document.getElementById('res-profit-label');
-    const profitSub = document.getElementById('res-profit-sub');
-
-    if (profit >= 0) {
-      profitBox.classList.remove('loss');
-      profitLbl.textContent = 'Net Profit';
-      profitSub.textContent = 'Great job!';
-    } else {
-      profitBox.classList.add('loss');
-      profitLbl.textContent = 'Net Loss';
-      profitSub.textContent = 'Costs exceed revenue';
-    }
-
-    // scroll to results
-    profitBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    const box = document.getElementById('res-profit-box');
+    const lbl = document.getElementById('res-profit-label');
+    if (netProfit >= 0) { box.classList.remove('loss'); lbl.textContent = 'Net Profit'; }
+    else { box.classList.add('loss'); lbl.textContent = 'Net Loss'; }
   }
 
-  // ---- History ----
-
-  function saveSession() {
-    const revenue = sumTable('revenue-body');
-    const cost    = sumTable('cost-body');
-    const profit  = revenue - cost;
-
-    if (revenue === 0 && cost === 0) {
-      alert('Add some revenue or costs first before saving.');
-      return;
-    }
-
-    const sessions = getHistory();
-    sessions.unshift({
-      date: new Date().toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }),
-      revenue,
-      cost,
-      profit
-    });
-    localStorage.setItem('aahar_sessions', JSON.stringify(sessions.slice(0, 20)));
-    renderHistory();
-  }
-
-  function getHistory() {
-    try { return JSON.parse(localStorage.getItem('aahar_sessions')) || []; }
-    catch { return []; }
-  }
-
-  function clearHistory() {
-    if (confirm('Clear all saved sessions?')) {
-      localStorage.removeItem('aahar_sessions');
-      renderHistory();
-    }
-  }
-
-  function renderHistory() {
-    const list = document.getElementById('history-list');
-    const sessions = getHistory();
-    if (sessions.length === 0) {
-      list.innerHTML = '<li class="empty-history">No sessions saved yet. Calculate and save a session to track over time.</li>';
-      return;
-    }
-    list.innerHTML = sessions.map(s => `
-      <li>
-        <div>
-          <div style="font-weight:500">${s.date}</div>
-          <div class="h-date">Revenue $${fmt(s.revenue)} &nbsp;|&nbsp; Costs $${fmt(s.cost)}</div>
-        </div>
-        <div class="h-profit ${s.profit >= 0 ? 'pos' : 'neg'}">
-          ${s.profit >= 0 ? '+' : '-'}$${fmt(Math.abs(s.profit))}
-        </div>
-      </li>
-    `).join('');
+  function getCostForItem(it, idx) {
+    const isManual = idx >= syncedItems.length;
+    return getCost(it.key);
   }
 
   // ---- Helpers ----
-
   function fmt(n) {
-    return Number(n.toFixed(2)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return Number((n || 0).toFixed(2)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  }
+  function escapeAttr(s) { return escapeHtml(s).replace(/`/g, '&#96;'); }
 
   // ---- Init ----
-
-  // Seed with a couple of example rows
-  const rb = document.getElementById('revenue-body');
-  rb.appendChild(createRevenueRow('Burger', '8.50', ''));
-  rb.appendChild(createRevenueRow('Coffee', '3.00', ''));
-  rb.appendChild(createRevenueRow());
-
-  const cb = document.getElementById('cost-body');
-  cb.appendChild(createCostRow('Raw Materials', ''));
-  cb.appendChild(createCostRow('Labour', ''));
-  cb.appendChild(createCostRow('Rent / Utilities', ''));
-  cb.appendChild(createCostRow());
-
-  renderHistory();
+  addExpense('Rent / Utilities', '');
+  addExpense('Gas / Fuel', '');
+  renderItems();
 </script>
 </body>
 </html>
